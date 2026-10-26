@@ -10,7 +10,7 @@ To do
   - PMC7702098
 - [x] fetch those papers and split them into passages for retrieval (`python3 fetch_passages.py`)
 - [x] build a small RAG index over the passages (`.venv/bin/python build_index.py`)
-- [ ] call an LLM to extract microbe–metabolite links, each tied to a supporting passage
+- [x] call an LLM to extract microbe–metabolite links, each tied to a supporting passage (`python3 extract_links.py`)
 - [ ] load the extracted links into Neo4j
 - [ ] expose a FastAPI endpoint that takes two microbes
 - [ ] search the graph for a path between them
