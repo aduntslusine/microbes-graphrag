@@ -1,7 +1,7 @@
 """Build a vector index over data/passages.json.
 
-Build: .venv/bin/python build_index.py
-Search: .venv/bin/python build_index.py "lactate butyrate"
+Build: .venv/bin/python scripts/build_index.py
+Search: .venv/bin/python scripts/build_index.py "lactate butyrate"
 """
 
 import json
@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-DATA_DIR = Path(__file__).resolve().parent / "data"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 PASSAGES_FILE = DATA_DIR / "passages.json"
 INDEX_FILE = DATA_DIR / "embeddings.npy"
 MODEL_NAME = "NeuML/biomedbert-small-embeddings"

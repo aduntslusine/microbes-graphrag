@@ -1,7 +1,7 @@
 """Extract microbe–metabolite links from data/passages.json.
 
 Uses a free local model through Ollama. No API key.
-Run: python3 extract_links.py
+Run: python3 scripts/extract_links.py
 """
 
 import json
@@ -9,7 +9,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent / "data"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 PASSAGES_FILE = DATA_DIR / "passages.json"
 LINKS_FILE = DATA_DIR / "links.json"
 MODEL = "qwen2.5:3b"

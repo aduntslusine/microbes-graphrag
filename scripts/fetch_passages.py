@@ -1,6 +1,6 @@
 """Fetch the papers in data/papers.txt and save them as short passages.
 
-Run: python3 fetch_passages.py
+Run: python3 scripts/fetch_passages.py
 """
 
 import json
@@ -8,7 +8,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent / "data"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 PAPERS_FILE = DATA_DIR / "papers.txt"
 OUTPUT_FILE = DATA_DIR / "passages.json"
 PASSAGE_SIZE = 800
